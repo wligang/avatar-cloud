@@ -1,0 +1,40 @@
+allprojects  {
+  apply plugin: 'maven'
+
+  group = 'com.pig4cloud'
+version = '2.3.1'
+}
+
+subprojects {
+  apply plugin: 'java'
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+  tasks.withType(JavaCompile) {
+  	options.encoding = 'UTF-8'
+  }
+
+  
+  repositories {
+    mavenLocal()
+    
+    maven { url "https://maven.aliyun.com/repository/public" }
+    maven { url "https://maven.aliyun.com/repository/spring" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+  }
+
+  
+  dependencies {
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version:'2.1.2.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version:'2.1.6.RELEASE'
+    compile group: 'com.github.ulisesbocchio', name: 'jasypt-spring-boot-starter', version:'2.1.0'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version:'2.1.6.RELEASE'
+    compile group: 'de.codecentric', name: 'spring-boot-admin-starter-client', version:'2.1.6'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-sleuth', version:'2.1.2.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-sleuth-zipkin', version:'2.1.2.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix', version:'2.1.2.RELEASE'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'2.1.6.RELEASE'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version:'1.18.8'
+}
+
+  
+}

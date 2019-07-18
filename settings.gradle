@@ -1,0 +1,34 @@
+rootProject.name = 'pig'
+include ':pig-eureka'
+include ':pig-config'
+include ':pig-gateway'
+include ':pig-auth'
+include ':pig-upms:pig-upms-api'
+include ':pig-upms:pig-upms-biz'
+include ':pig-upms'
+include ':pig-common:pig-common-core'
+include ':pig-common:pig-common-log'
+include ':pig-common:pig-common-security'
+include ':pig-common'
+include ':pig-visual:pig-codegen'
+include ':pig-visual:pig-monitor'
+include ':pig-visual:pig-zipkin'
+include ':pig-visual'
+include ':pig-upms:pig-app'
+
+project(':pig-eureka').projectDir = "$rootDir/pig-eureka" as File
+project(':pig-config').projectDir = "$rootDir/pig-config" as File
+project(':pig-gateway').projectDir = "$rootDir/pig-gateway" as File
+project(':pig-auth').projectDir = "$rootDir/pig-auth" as File
+project(':pig-upms:pig-upms-api').projectDir = "$rootDir/pig-upms/pig-upms-api" as File
+project(':pig-upms:pig-upms-biz').projectDir = "$rootDir/pig-upms/pig-upms-biz" as File
+project(':pig-upms').projectDir = "$rootDir/pig-upms" as File
+project(':pig-common:pig-common-core').projectDir = "$rootDir/pig-common/pig-common-core" as File
+project(':pig-common:pig-common-log').projectDir = "$rootDir/pig-common/pig-common-log" as File
+project(':pig-common:pig-common-security').projectDir = "$rootDir/pig-common/pig-common-security" as File
+project(':pig-common').projectDir = "$rootDir/pig-common" as File
+project(':pig-visual:pig-codegen').projectDir = "$rootDir/pig-visual/pig-codegen" as File
+project(':pig-visual:pig-monitor').projectDir = "$rootDir/pig-visual/pig-monitor" as File
+project(':pig-visual:pig-zipkin').projectDir = "$rootDir/pig-visual/pig-zipkin" as File
+project(':pig-visual').projectDir = "$rootDir/pig-visual" as File
+project(':pig-upms:pig-app').projectDir = "$rootDir/pig-upms-app" as File
