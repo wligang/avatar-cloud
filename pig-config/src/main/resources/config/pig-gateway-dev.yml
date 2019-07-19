@@ -36,10 +36,7 @@ spring:
           uri: lb://pig-codegen
           predicates:
             - Path=/gen/**
-        - id: pig-app
-          uri: lb://pig-app
-          predicates:
-            - Path=/app/**
+
 
 security:
   encode:

@@ -16,6 +16,7 @@
 
 package com.wlgdo.avatar.common.security.service;
 
+import cn.hutool.Hutool;
 import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.core.util.StrUtil;
 import com.wlgdo.avatar.admin.api.dto.UserInfo;
