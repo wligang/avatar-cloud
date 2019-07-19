@@ -21,9 +21,9 @@
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.pig4cloud.pig.apps.mapper.AppInfoMapper">
+<mapper namespace="com.wlgdo.avatar.apps.mapper.AppInfoMapper">
 
-  <resultMap id="appInfoMap" type="com.pig4cloud.pig.apps.entity.AppInfo">
+  <resultMap id="appInfoMap" type="com.wlgdo.avatar.apps.entity.AppInfo">
                   <id property="id" column="id"/>
                         <result property="appId" column="app_id"/>
                         <result property="appName" column="app_name"/>

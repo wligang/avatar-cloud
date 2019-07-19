@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.pig4cloud.pig.common.core.constant;
+package com.wlgdo.avatar.common.core.constant;
 
 /**
  * @author lengleng

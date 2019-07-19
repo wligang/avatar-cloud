@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.pig4cloud.pig.common.log;
+package com.wlgdo.avatar.common.log;
 
-import com.pig4cloud.pig.admin.api.feign.RemoteLogService;
-import com.pig4cloud.pig.common.log.aspect.SysLogAspect;
-import com.pig4cloud.pig.common.log.event.SysLogListener;
+import com.wlgdo.avatar.admin.api.feign.RemoteLogService;
+import com.wlgdo.avatar.common.log.aspect.SysLogAspect;
+import com.wlgdo.avatar.common.log.event.SysLogListener;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Bean;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.pig4cloud.pig.common.log.annotation;
+package com.wlgdo.avatar.common.log.annotation;
 
 import java.lang.annotation.*;
 

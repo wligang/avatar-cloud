@@ -16,10 +16,10 @@
   -->
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.pig4cloud.pig.admin.mapper.SysMenuMapper">
+<mapper namespace="com.wlgdo.avatar.admin.mapper.SysMenuMapper">
 
 	<!-- 通用查询映射结果 -->
-	<resultMap id="BaseResultMap" type="com.pig4cloud.pig.admin.api.entity.SysMenu">
+	<resultMap id="BaseResultMap" type="com.wlgdo.avatar.admin.api.entity.SysMenu">
 		<id column="menu_id" property="menuId"/>
 		<result column="name" property="name"/>
 		<result column="permission" property="permission"/>
@@ -35,7 +35,7 @@
 		<result column="del_flag" property="delFlag"/>
 	</resultMap>
 
-	<resultMap id="MenuVoResultMap" type="com.pig4cloud.pig.admin.api.vo.MenuVO">
+	<resultMap id="MenuVoResultMap" type="com.wlgdo.avatar.admin.api.vo.MenuVO">
 		<id column="menu_id" property="menuId"/>
 		<result column="name" property="name"/>
 		<result column="permission" property="permission"/>

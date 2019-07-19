@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.pig4cloud.pig.common.core.constant.enums;
+package com.wlgdo.avatar.common.core.constant.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

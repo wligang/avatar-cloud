@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.pig4cloud.pig.common.core.util;
+package com.wlgdo.avatar.common.core.util;
 
-import com.pig4cloud.pig.common.core.constant.CommonConstants;
+import com.wlgdo.avatar.common.core.constant.CommonConstants;
 import lombok.*;
 import lombok.experimental.Accessors;
 

@@ -18,9 +18,9 @@
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.pig4cloud.pig.admin.mapper.SysOauthClientDetailsMapper">
+<mapper namespace="com.wlgdo.avatar.admin.mapper.SysOauthClientDetailsMapper">
 
-	<resultMap id="sysOauthClientDetailsMap" type="com.pig4cloud.pig.admin.api.entity.SysOauthClientDetails">
+	<resultMap id="sysOauthClientDetailsMap" type="com.wlgdo.avatar.admin.api.entity.SysOauthClientDetails">
 		<id property="clientId" column="client_id"/>
 		<result property="resourceIds" column="resource_ids"/>
 		<result property="clientSecret" column="client_secret"/>

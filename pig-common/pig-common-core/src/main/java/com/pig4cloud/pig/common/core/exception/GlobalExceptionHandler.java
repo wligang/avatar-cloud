@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.pig4cloud.pig.common.core.exception;
+package com.wlgdo.avatar.common.core.exception;
 
-import com.pig4cloud.pig.common.core.util.R;
+import com.wlgdo.avatar.common.core.util.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindException;

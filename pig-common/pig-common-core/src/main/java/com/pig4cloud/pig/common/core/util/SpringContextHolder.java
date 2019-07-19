@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.pig4cloud.pig.common.core.util;
+package com.wlgdo.avatar.common.core.util;
 
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.pig4cloud.pig.common.log.util;
+package com.wlgdo.avatar.common.log.util;
 
 import cn.hutool.core.util.URLUtil;
 import cn.hutool.extra.servlet.ServletUtil;
 import cn.hutool.http.HttpUtil;
-import com.pig4cloud.pig.admin.api.entity.SysLog;
-import com.pig4cloud.pig.common.core.constant.CommonConstants;
+import com.wlgdo.avatar.admin.api.entity.SysLog;
+import com.wlgdo.avatar.common.core.constant.CommonConstants;
 import lombok.experimental.UtilityClass;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

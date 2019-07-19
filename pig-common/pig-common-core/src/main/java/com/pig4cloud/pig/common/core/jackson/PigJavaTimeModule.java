@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.pig4cloud.pig.common.core.jackson;
+package com.wlgdo.avatar.common.core.jackson;
 
 import cn.hutool.core.date.DatePattern;
 import com.fasterxml.jackson.databind.module.SimpleModule;

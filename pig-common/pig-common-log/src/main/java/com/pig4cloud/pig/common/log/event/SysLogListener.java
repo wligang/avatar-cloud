@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.pig4cloud.pig.common.log.event;
+package com.wlgdo.avatar.common.log.event;
 
-import com.pig4cloud.pig.admin.api.entity.SysLog;
-import com.pig4cloud.pig.admin.api.feign.RemoteLogService;
-import com.pig4cloud.pig.common.core.constant.SecurityConstants;
+import com.wlgdo.avatar.admin.api.entity.SysLog;
+import com.wlgdo.avatar.admin.api.feign.RemoteLogService;
+import com.wlgdo.avatar.common.core.constant.SecurityConstants;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;

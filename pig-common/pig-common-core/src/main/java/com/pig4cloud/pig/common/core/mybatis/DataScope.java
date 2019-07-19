@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.pig4cloud.pig.common.core.mybatis;
+package com.wlgdo.avatar.common.core.mybatis;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
