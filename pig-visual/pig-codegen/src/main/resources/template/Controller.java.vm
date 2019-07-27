@@ -19,7 +19,7 @@ package ${package}.${moduleName}.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wlgdo.avatar.common.core.util.R;
-import com.wlgdo.avatar.common.log.annotation.SysLog;
+import SysLog;
 import ${package}.${moduleName}.entity.${className};
 import ${package}.${moduleName}.service.${className}Service;
 import lombok.AllArgsConstructor;

@@ -75,7 +75,7 @@ public class ValidateCodeGatewayFilter extends AbstractGatewayFilterFactory {
 				}
 
 				//校验验证码
-				checkCode(request);
+				//checkCode(request);
 			} catch (Exception e) {
 				ServerHttpResponse response = exchange.getResponse();
 				response.setStatusCode(HttpStatus.PRECONDITION_REQUIRED);
