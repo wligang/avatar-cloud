@@ -1,3 +1,4 @@
+apply plugin: 'org.springframework.boot'
 description = ''
 dependencies {
   compile group: 'de.codecentric', name: 'spring-boot-admin-starter-server', version: '2.1.6'
