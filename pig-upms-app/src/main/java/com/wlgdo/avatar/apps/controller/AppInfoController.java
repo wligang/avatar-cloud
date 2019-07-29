@@ -70,7 +70,7 @@ public class AppInfoController {
    */
   @SysLog("新增应用信息表")
   @PostMapping
-  @PreAuthorize("@pms.hasPermission('appx_appinfo_add')")
+  @PreAuthorize("@pms.hasPermission('app_appinfo_add')")
   public R save(@RequestBody AppInfo appInfo){
     return new R<>(appInfoService.save(appInfo));
   }
@@ -82,7 +82,7 @@ public class AppInfoController {
    */
   @SysLog("修改应用信息表")
   @PutMapping
-  @PreAuthorize("@pms.hasPermission('appx_appinfo_edit')")
+  @PreAuthorize("@pms.hasPermission('app_appinfo_edit')")
   public R update(@RequestBody AppInfo appInfo){
     return new R<>(appInfoService.updateById(appInfo));
   }
@@ -94,7 +94,7 @@ public class AppInfoController {
    */
   @SysLog("删除应用信息表")
   @DeleteMapping("/{id}")
-  @PreAuthorize("@pms.hasPermission('appx_appinfo_del')")
+  @PreAuthorize("@pms.hasPermission('app_appinfo_del')")
   public R removeById(@PathVariable Integer id){
     return new R<>(appInfoService.removeById(id));
   }
