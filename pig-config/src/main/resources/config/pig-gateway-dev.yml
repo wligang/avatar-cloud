@@ -36,6 +36,7 @@ spring:
           uri: lb://pig-codegen
           predicates:
             - Path=/gen/**
+        # APP模块
         - id: pig-app
           uri: lb://pig-app
           predicates:
