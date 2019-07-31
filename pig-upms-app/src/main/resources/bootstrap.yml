@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: pig-app
+    name: web-app
   # 配置中心
   cloud:
     config:
