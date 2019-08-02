@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: pig-gateway
+    name: avatar-gateway
   # 配置中心
   cloud:
     config:
@@ -12,7 +12,7 @@ spring:
       profile: ${spring.profiles.active}
       discovery:
         enabled: true
-        service-id: pig-config
+        service-id: avatar-config
   profiles:
     active: dev
   main:
@@ -24,6 +24,6 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://pig:pig@pig-eureka:8761/eureka/
+      defaultZone: http://avatar:pig@pig-eureka:8761/eureka/
 
 

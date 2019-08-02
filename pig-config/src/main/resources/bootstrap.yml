@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: pig-config
+    name: avatar-config
   profiles:
     active: native
   # 配置中心
@@ -19,7 +19,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://pig:pig@pig-eureka:8761/eureka/
+      defaultZone: http://avatar:pig@pig-eureka:8761/eureka/
 
 # 暴露监控端点
 management:
