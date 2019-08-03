@@ -27,9 +27,9 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  */
 @EnableConfigServer
 @SpringCloudApplication
-public class PigConfigApplication {
+public class AvatarConfigApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PigConfigApplication.class, args);
+		SpringApplication.run(AvatarConfigApplication.class, args);
 	}
 }
