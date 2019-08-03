@@ -1,4 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    com.wlgdo.avatar.common.log.LogAutoConfiguration
-org.springframework.context.ApplicationContextInitializer=\
-    com.wlgdo.avatar.common.log.init.ApplicationLoggerInitializer
