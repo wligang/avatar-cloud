@@ -18,7 +18,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
 
-# 注册中心配置pig-mysql
+# 注册中心配置
 eureka:
   instance:
     prefer-ip-address: true
