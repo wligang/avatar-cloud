@@ -17,4 +17,4 @@ include ':avatar-visual:avatar-codegen'
 include ':avatar-visual:avatar-monitor'
 include ':avatar-visual:avatar-zipkin'
 
-include ':avatar-upms-app'
+include ':avatar-app'

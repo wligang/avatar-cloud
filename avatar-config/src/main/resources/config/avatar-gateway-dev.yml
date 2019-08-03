@@ -15,7 +15,7 @@ spring:
             # 前端密码解密
             - PasswordDecoderFilter
         #UPMS 模块
-        - id: pig-upms
+        - id: avatar-upms
           uri: lb://avatar-upms
           predicates:
             - Path=/admin/**
@@ -37,7 +37,7 @@ spring:
           predicates:
             - Path=/gen/**
         # APP模块
-        - id: web-app
+        - id: avatar-app
           uri: lb://avatar-app
           predicates:
             - Path=/app/**
