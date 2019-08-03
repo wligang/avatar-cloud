@@ -4,8 +4,8 @@ server:
 spring:
   security:
     user:
-      name: pig
-      password: pig
+      name: avatar
+      password: avatar
   application:
     name: avatar-eureka
   cloud:
