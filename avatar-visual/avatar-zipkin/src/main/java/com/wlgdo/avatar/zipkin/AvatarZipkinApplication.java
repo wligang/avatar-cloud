@@ -16,9 +16,9 @@ import javax.sql.DataSource;
  */
 @EnableZipkinServer
 @SpringCloudApplication
-public class PigZipkinApplication {
+public class AvatarZipkinApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(PigZipkinApplication.class, args);
+		SpringApplication.run(AvatarZipkinApplication.class, args);
 	}
 
 	@Bean

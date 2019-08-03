@@ -28,9 +28,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @EnableAdminServer
 @SpringBootApplication
-public class PigMonitorApplication {
+public class AvatarMonitorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PigMonitorApplication.class, args);
+		SpringApplication.run(AvatarMonitorApplication.class, args);
 	}
 }

@@ -29,9 +29,9 @@ import org.springframework.cloud.client.SpringCloudApplication;
 @EnablePigFeignClients
 @EnablePigResourceServer
 @SpringCloudApplication
-public class PigCodeGenApplication {
+public class AvatarCodeGenApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PigCodeGenApplication.class, args);
+		SpringApplication.run(AvatarCodeGenApplication.class, args);
 	}
 }

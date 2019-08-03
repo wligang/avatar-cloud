@@ -30,9 +30,9 @@ import org.springframework.cloud.client.SpringCloudApplication;
 @EnablePigResourceServer
 @EnablePigFeignClients
 @SpringCloudApplication
-public class PigAppApplication {
+public class AvatarAppApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(PigAppApplication.class, args);
+		SpringApplication.run(AvatarAppApplication.class, args);
 	}
 
 }
