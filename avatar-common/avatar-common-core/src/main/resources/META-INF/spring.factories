@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.wlgdo.avatar.common.core.config.JacksonConfig,\
+  com.wlgdo.avatar.common.core.config.RedisTemplateConfig,\
+  com.wlgdo.avatar.common.core.config.RestTemplateConfig,\
+  com.wlgdo.avatar.common.core.config.FilterIgnorePropertiesConfig,\
+  com.wlgdo.avatar.common.core.exception.GlobalExceptionHandler,\
+  com.wlgdo.avatar.common.core.util.SpringContextHolder

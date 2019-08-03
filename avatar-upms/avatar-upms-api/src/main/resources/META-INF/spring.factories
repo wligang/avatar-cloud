@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.wlgdo.avatar.admin.api.feign.fallback.RemoteUserServiceFallbackImpl,\
+  com.wlgdo.avatar.admin.api.feign.fallback.RemoteLogServiceFallbackImpl,\
+  com.wlgdo.avatar.admin.api.feign.fallback.RemoteTokenServiceFallbackImpl,\
+  com.wlgdo.avatar.admin.api.feign.factory.RemoteUserServiceFallbackFactory,\
+  com.wlgdo.avatar.admin.api.feign.factory.RemoteLogServiceFallbackFactory,\
+  com.wlgdo.avatar.admin.api.feign.factory.RemoteTokenServiceFallbackFactory
