@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.wlgdo.avatar.common.security.service.PigUserDetailsServiceImpl
