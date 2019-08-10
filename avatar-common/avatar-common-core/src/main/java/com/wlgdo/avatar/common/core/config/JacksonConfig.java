@@ -4,7 +4,7 @@ package com.wlgdo.avatar.common.core.config;
 
 import cn.hutool.core.date.DatePattern;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.wlgdo.avatar.common.core.jackson.PigJavaTimeModule;
+import com.wlgdo.avatar.common.core.jackson.DateTimeModule;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
@@ -27,7 +27,7 @@ public class JacksonConfig {
 			builder.locale(Locale.CHINA);
 			builder.timeZone(TimeZone.getTimeZone(ZoneId.systemDefault()));
 			builder.simpleDateFormat(DatePattern.NORM_DATETIME_PATTERN);
-			builder.modules(new PigJavaTimeModule());
+			builder.modules(new DateTimeModule());
 		};
 	}
 }

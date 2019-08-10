@@ -9,9 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * @author lengleng
- * @date 2019/2/1
- * 数据权限查询参数
+ *
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

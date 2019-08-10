@@ -1,5 +1,3 @@
-
-
 package com.wlgdo.avatar.common.core.util;
 
 import com.wlgdo.avatar.common.core.constant.CommonConstants;
@@ -9,12 +7,6 @@ import lombok.experimental.Accessors;
 import java.io.Serializable;
 
 
-/**
- * 响应信息主体
- *
- * @param <T>
- * @author lengleng
- */
 @Builder
 @ToString
 @Accessors(chain = true)

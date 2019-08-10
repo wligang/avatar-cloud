@@ -23,9 +23,9 @@ import java.time.format.DateTimeFormatter;
  * @author lishanbu
  */
 
-public class PigJavaTimeModule extends SimpleModule {
+public class DateTimeModule extends SimpleModule {
 
-	public PigJavaTimeModule() {
+	public DateTimeModule() {
 		super(PackageVersion.VERSION);
 		this.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(DateTimeFormatter.ofPattern(DatePattern.NORM_DATETIME_PATTERN)));
 		this.addSerializer(LocalDate.class, new LocalDateSerializer(DateTimeFormatter.ofPattern(DatePattern.NORM_DATE_PATTERN)));

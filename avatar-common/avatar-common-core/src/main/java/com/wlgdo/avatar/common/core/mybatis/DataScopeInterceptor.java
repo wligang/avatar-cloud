@@ -21,12 +21,7 @@ import java.util.Map;
 import java.util.Properties;
 
 
-/**
- * @author lengleng
- * @date 2019/2/1
- * <p>
- * mybatis 数据权限拦截器
- */
+
 @Slf4j
 @Intercepts({@Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class, Integer.class})})
 public class DataScopeInterceptor extends AbstractSqlParserHandler implements Interceptor {

@@ -8,12 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.List;
 
-/**
- * @author lengleng
- * @date 2019-06-24
- * <p>
- * 注入自自定义SQL 过滤
- */
+
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
 	@Override
