@@ -17,7 +17,7 @@ import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.G
 import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.addOriginalRequestUrl;
 
 /**
- * @author lengleng
+ * @author Feify
  * @date 2019/2/1
  * <p>
  * 全局拦截器，作用所有的微服务

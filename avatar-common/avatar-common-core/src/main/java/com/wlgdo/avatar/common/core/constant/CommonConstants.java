@@ -3,7 +3,7 @@
 package com.wlgdo.avatar.common.core.constant;
 
 /**
- * @author lengleng
+ * @author Feify
  * @date 2019/2/1
  */
 public interface CommonConstants {

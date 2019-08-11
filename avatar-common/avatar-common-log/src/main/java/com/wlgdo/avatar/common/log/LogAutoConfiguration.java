@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
- * @author lengleng
+ * @author Feify
  * @date 2019/2/1
  * 日志自动配置
  */

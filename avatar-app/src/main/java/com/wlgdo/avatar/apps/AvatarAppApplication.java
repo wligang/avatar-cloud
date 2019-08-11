@@ -8,7 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 
 /**
- * @author lengleng
+ * @author Feify
  * @date 2018年06月21日
  * 用户统一管理系统
  */

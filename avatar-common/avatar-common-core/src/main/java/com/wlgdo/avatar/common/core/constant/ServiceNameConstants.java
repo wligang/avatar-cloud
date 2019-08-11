@@ -3,7 +3,7 @@
 package com.wlgdo.avatar.common.core.constant;
 
 /**
- * @author lengleng
+ * @author Feify
  * @date 2018年06月22日16:41:01
  * 服务名称
  */

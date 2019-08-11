@@ -5,7 +5,7 @@ package com.wlgdo.avatar.common.security.annotation;
 import java.lang.annotation.*;
 
 /**
- * @author lengleng
+ * @author Feify
  * @date 2018/11/26
  * <p>
  * 服务调用不鉴权注解

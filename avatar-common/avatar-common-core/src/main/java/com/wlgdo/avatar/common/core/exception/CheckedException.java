@@ -3,7 +3,7 @@ package com.wlgdo.avatar.common.core.exception;
 import lombok.NoArgsConstructor;
 
 /**
- * @author lengleng
+ * @author Feify
  * @date 😴2018年06月22日16:21:57
  */
 @NoArgsConstructor
