@@ -1,5 +1,3 @@
-
-
 package com.wlgdo.avatar.common.core.exception;
 
 /**

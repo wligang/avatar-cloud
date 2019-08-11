@@ -24,7 +24,7 @@ package com.wlgdo.avatar.common.security.component;
 import cn.hutool.http.HttpStatus;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.wlgdo.avatar.common.core.constant.CommonConstants;
-import com.wlgdo.avatar.common.core.exception.PigDeniedException;
+import com.wlgdo.avatar.common.core.exception.DeniedException;
 import com.wlgdo.avatar.common.core.util.R;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
@@ -61,7 +61,7 @@ public class PigAccessDeniedHandler extends OAuth2AccessDeniedHandler {
 		log.info("授权失败，禁止访问 {}", request.getRequestURI());
 		response.setCharacterEncoding(CommonConstants.UTF8);
 		response.setContentType(CommonConstants.CONTENT_TYPE);
-		R<String> result = new R<>(new PigDeniedException("授权失败，禁止访问"));
+		R<String> result = new R<>(new DeniedException("授权失败，禁止访问"));
 		response.setStatus(HttpStatus.HTTP_FORBIDDEN);
 		PrintWriter printWriter = response.getWriter();
 		printWriter.append(objectMapper.writeValueAsString(result));

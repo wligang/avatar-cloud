@@ -1,4 +1,3 @@
-
 package com.wlgdo.avatar.common.core.jackson;
 
 import cn.hutool.core.date.DatePattern;
