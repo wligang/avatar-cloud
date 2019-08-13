@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 public class SqlFilterArgumentResolver implements HandlerMethodArgumentResolver {
 	private final static String[] KEYWORDS = {"master", "truncate", "insert", "select"
-			, "delete", "update", "declare", "alter", "drop", "sleep"};
+		, "delete", "update", "declare", "alter", "drop", "sleep"};
 
 	/**
 	 * 判断Controller是否包含page 参数
@@ -45,7 +45,7 @@ public class SqlFilterArgumentResolver implements HandlerMethodArgumentResolver 
 	 */
 	@Override
 	public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer
-			, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) {
+		, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) {
 
 		HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class);
 

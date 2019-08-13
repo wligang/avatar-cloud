@@ -8,6 +8,7 @@ import com.wlgdo.avatar.common.core.util.R;
 import com.wlgdo.avatar.common.log.annotation.SysLog;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
  * @author Ligang.Wang
  * @date 2019-07-18 23:00:08
  */
+@Slf4j
 @RestController
 @AllArgsConstructor
 @RequestMapping("/appinfo")
@@ -33,6 +35,9 @@ public class AppInfoController {
    */
   @GetMapping("/page")
   public R<IPage<AppInfo>> getAppInfoPage(Page<AppInfo> page, AppInfo appInfo) {
+
+  	log.info("this is Info log :{}","Info");
+  	log.error("this is Error log :{}","ERROR");
     return  new R<>(appInfoService.getAppInfoPage(page,appInfo));
   }
 

@@ -21,7 +21,6 @@ import java.util.Map;
 import java.util.Properties;
 
 
-
 @Slf4j
 @Intercepts({@Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class, Integer.class})})
 public class DataScopeInterceptor extends AbstractSqlParserHandler implements Interceptor {
