@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 删除token端点
+ * 自定义token端点
  */
 @RestController
 @AllArgsConstructor
