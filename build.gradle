@@ -3,7 +3,7 @@ println "######################[start compile] env is $env #####################
 
 buildscript {
   ext {
-    springBootVersion = '2.1.4.RELEASE'
+    springBootVersion = '2.1.7.RELEASE'
   }
   repositories {
     maven {
@@ -20,18 +20,20 @@ buildscript {
 }
 
 allprojects {
-
-  group 'com.wlgdo.avatar'
-  version '1.0-SNAPSHOT'
-}
-
-subprojects {
   apply plugin: 'java'
   apply plugin: 'idea'
   apply plugin: 'io.spring.dependency-management'
+
+  group 'com.wlgdo.avatar'
+  version '1.0-SNAPSHOT'
+
   [compileJava, compileTestJava]*.options*.encoding = "UTF-8"
   sourceCompatibility = 1.8
   targetCompatibility = 1.8
+}
+
+subprojects {
+
 
   repositories {
     mavenLocal()
@@ -44,15 +46,15 @@ subprojects {
   }
 
   dependencies {
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.1.2.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '2.1.6.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: "${springBootVersion}"
+    compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: "${springBootVersion}"
     compile group: 'com.github.ulisesbocchio', name: 'jasypt-spring-boot-starter', version: '2.1.0'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.1.6.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: "${springBootVersion}"
     compile group: 'de.codecentric', name: 'spring-boot-admin-starter-client', version: '2.1.6'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-sleuth', version: '2.1.2.RELEASE'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-sleuth-zipkin', version: '2.1.2.RELEASE'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix', version: '2.1.2.RELEASE'
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.6.RELEASE'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: "${springBootVersion}"
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
   }
   sourceSets.main.resources.srcDirs = ["src/main/resources", "src/main/environment/$env"]
