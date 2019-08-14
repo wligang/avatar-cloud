@@ -11,7 +11,7 @@ dependencies {
   compile group: 'com.baomidou', name: 'mybatis-plus-boot-starter', version: '3.1.2'
   compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.3.6.RELEASE'
 
-  compile(group: 'mysql', name: 'mysql-connector-java', version: '8.0.16') {
+  compile(group: 'mysql', name: 'mysql-connector-java', version:"${mysqlVersion}") {
     exclude(module: 'protobuf-java')
   }
 
