@@ -1,5 +1,3 @@
-
-
 package com.wlgdo.avatar.admin.api.vo;
 
 
@@ -13,7 +11,6 @@ import java.util.List;
 
 /**
  * @author Feify
- * @date 2017年11月9日23:34:11
  */
 @UtilityClass
 public class TreeUtil {

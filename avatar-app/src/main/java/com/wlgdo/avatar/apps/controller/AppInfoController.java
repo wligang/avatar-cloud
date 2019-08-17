@@ -35,10 +35,7 @@ public class AppInfoController {
    */
   @GetMapping("/page")
   public R<IPage<AppInfo>> getAppInfoPage(Page<AppInfo> page, AppInfo appInfo) {
-
-  	log.info("this is Info log :{}","Info");
-  	log.error("this is Error log :{}","ERROR");
-    return  new R<>(appInfoService.getAppInfoPage(page,appInfo));
+  	return  new R<>(appInfoService.getAppInfoPage(page,appInfo));
   }
 
 

@@ -1,5 +1,3 @@
-
-
 package com.wlgdo.avatar.admin.service.impl;
 
 import cn.hutool.core.collection.CollUtil;
@@ -28,9 +26,10 @@ import java.util.stream.Collectors;
  *
 * @author Feify
  */
-@Service
 @AllArgsConstructor
+@Service
 public class SysDeptServiceImpl extends ServiceImpl<SysDeptMapper, SysDept> implements SysDeptService {
+
 	private final SysDeptRelationService sysDeptRelationService;
 
 	/**
@@ -60,9 +59,7 @@ public class SysDeptServiceImpl extends ServiceImpl<SysDeptMapper, SysDept> impl
 	@Transactional(rollbackFor = Exception.class)
 	public Boolean removeDeptById(Integer id) {
 		//级联删除部门
-		List<Integer> idList = sysDeptRelationService
-			.list(Wrappers.<SysDeptRelation>query().lambda()
-				.eq(SysDeptRelation::getAncestor, id))
+		List<Integer> idList = sysDeptRelationService .list(Wrappers.<SysDeptRelation>query().lambda() .eq(SysDeptRelation::getAncestor, id))
 			.stream()
 			.map(SysDeptRelation::getDescendant)
 			.collect(Collectors.toList());

@@ -1,5 +1,3 @@
-
-
 package com.wlgdo.avatar.admin.api.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
