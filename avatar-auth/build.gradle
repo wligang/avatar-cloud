@@ -1,4 +1,5 @@
 apply plugin: 'org.springframework.boot'
+
 description = ''
 dependencies {
   compile project(':avatar-upms:avatar-upms-api')
