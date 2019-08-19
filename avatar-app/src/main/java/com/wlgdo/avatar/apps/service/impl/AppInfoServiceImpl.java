@@ -63,7 +63,7 @@ public class AppInfoServiceImpl extends ServiceImpl<AppInfoMapper, AppInfo> impl
 	}
 
 	@Override
-	public Map getMap(String field, QueryWrapper quaryWrapper) throws IntrospectionException {
+	public Map<Object,AppInfo> getMap(String field, QueryWrapper quaryWrapper) throws IntrospectionException {
 		List<AppInfo> list = appInfoMapper.selectList(quaryWrapper);
 		PropertyDescriptor propertyDescriptor = new PropertyDescriptor(field, AppInfo.class);
 
@@ -81,7 +81,7 @@ public class AppInfoServiceImpl extends ServiceImpl<AppInfoMapper, AppInfo> impl
 		return collect;
 	}
 
-	public List filter(String field, Object target, QueryWrapper quaryWrapper) throws IntrospectionException {
+	public List<AppInfo> filter(String field, Object target, QueryWrapper quaryWrapper) throws IntrospectionException {
 		List<AppInfo> list = appInfoMapper.selectList(quaryWrapper);
 		PropertyDescriptor propertyDescriptor = new PropertyDescriptor(field, AppInfo.class);
 		List<AppInfo> collect = list.stream().filter(a -> {
