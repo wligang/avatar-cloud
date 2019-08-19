@@ -37,6 +37,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * 应用信息表
@@ -62,15 +63,14 @@ public class AppInfoServiceImpl extends ServiceImpl<AppInfoMapper, AppInfo> impl
 	}
 
 	@Override
-	public Map getMap(String field, QueryWrapper quaryWrapper) throws IntrospectionException {
+	public Map<Object,AppInfo> getMap(String field, QueryWrapper quaryWrapper) throws IntrospectionException {
 		List<AppInfo> list = appInfoMapper.selectList(quaryWrapper);
-		Class clazz = AppInfo.class;
-		PropertyDescriptor pd = new PropertyDescriptor(field, clazz);
-		Method getMethod = pd.getReadMethod();
+		PropertyDescriptor propertyDescriptor = new PropertyDescriptor(field, AppInfo.class);
 
+		//注意在lambda中key相同时会异常
 		Map<Object, AppInfo> collect = list.stream().collect(Collectors.toMap(act -> {
 			try {
-				return (getMethod.invoke(act, pd.getPropertyType()));
+				return (propertyDescriptor.getReadMethod().invoke(act));
 			} catch (IllegalAccessException e) {
 				e.printStackTrace();
 			} catch (InvocationTargetException e) {
@@ -81,5 +81,20 @@ public class AppInfoServiceImpl extends ServiceImpl<AppInfoMapper, AppInfo> impl
 		return collect;
 	}
 
+	public List<AppInfo> filter(String field, Object target, QueryWrapper quaryWrapper) throws IntrospectionException {
+		List<AppInfo> list = appInfoMapper.selectList(quaryWrapper);
+		PropertyDescriptor propertyDescriptor = new PropertyDescriptor(field, AppInfo.class);
+		List<AppInfo> collect = list.stream().filter(a -> {
+			try {
+				return target.equals(propertyDescriptor.getReadMethod().invoke(a));
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			} catch (InvocationTargetException e) {
+				e.printStackTrace();
+			}
+			return false;
+		}).collect(Collectors.toList());
+		return collect;
+	}
 
 }
