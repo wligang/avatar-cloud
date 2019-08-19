@@ -65,12 +65,12 @@ public class AppInfoServiceImpl extends ServiceImpl<AppInfoMapper, AppInfo> impl
 	public Map getMap(String field, QueryWrapper quaryWrapper) throws IntrospectionException {
 		List<AppInfo> list = appInfoMapper.selectList(quaryWrapper);
 		Class clazz = AppInfo.class;
-		PropertyDescriptor pd = new PropertyDescriptor(field, clazz);
-		Method getMethod = pd.getReadMethod();
+		PropertyDescriptor propertyDescriptor = new PropertyDescriptor(field, clazz);
 
+		//注意在lambda中key相同时会异常
 		Map<Object, AppInfo> collect = list.stream().collect(Collectors.toMap(act -> {
 			try {
-				return (getMethod.invoke(act, pd.getPropertyType()));
+				return (propertyDescriptor.getReadMethod().invoke(act));
 			} catch (IllegalAccessException e) {
 				e.printStackTrace();
 			} catch (InvocationTargetException e) {
