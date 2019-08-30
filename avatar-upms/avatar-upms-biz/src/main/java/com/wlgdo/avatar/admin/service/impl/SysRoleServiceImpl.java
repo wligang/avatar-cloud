@@ -26,6 +26,7 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> implements SysRoleService {
+
 	private SysRoleMenuMapper sysRoleMenuMapper;
 
 	/**

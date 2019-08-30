@@ -34,6 +34,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Collection;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -63,14 +64,14 @@ public class AppInfoServiceImpl extends ServiceImpl<AppInfoMapper, AppInfo> impl
 	}
 
 	@Override
-	public Map<Object,AppInfo> getMap(String field, QueryWrapper quaryWrapper) throws IntrospectionException {
+	public Map<Object, AppInfo> getMap(String field, QueryWrapper quaryWrapper) throws IntrospectionException {
 		List<AppInfo> list = appInfoMapper.selectList(quaryWrapper);
 		PropertyDescriptor propertyDescriptor = new PropertyDescriptor(field, AppInfo.class);
-
+		Method getMethod = propertyDescriptor.getReadMethod();
 		//注意在lambda中key相同时会异常
 		Map<Object, AppInfo> collect = list.stream().collect(Collectors.toMap(act -> {
 			try {
-				return (propertyDescriptor.getReadMethod().invoke(act));
+				return (getMethod.invoke(act));
 			} catch (IllegalAccessException e) {
 				e.printStackTrace();
 			} catch (InvocationTargetException e) {
@@ -97,4 +98,11 @@ public class AppInfoServiceImpl extends ServiceImpl<AppInfoMapper, AppInfo> impl
 		return collect;
 	}
 
+	public IntSummaryStatistics statistics(String field, QueryWrapper quaryWrapper) throws IntrospectionException {
+		List<AppInfo> list = appInfoMapper.selectList(quaryWrapper);
+//		PropertyDescriptor propertyDesc = new PropertyDescriptor(field, AppInfo.class);
+//		Method getMethod = propertyDesc.getReadMethod();
+		IntSummaryStatistics sum = list.stream().mapToInt(a -> 1).summaryStatistics();
+		return sum;
+	}
 }

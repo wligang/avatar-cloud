@@ -24,9 +24,7 @@ import java.util.stream.Collectors;
 * @author Feify
  */
 @Service
-@AllArgsConstructor
 public class SysDeptRelationServiceImpl extends ServiceImpl<SysDeptRelationMapper, SysDeptRelation> implements SysDeptRelationService {
-	private final SysDeptRelationMapper sysDeptRelationMapper;
 
 	/**
 	 * 维护部门关系
@@ -39,7 +37,7 @@ public class SysDeptRelationServiceImpl extends ServiceImpl<SysDeptRelationMappe
 		//增加部门关系表
 		SysDeptRelation condition = new SysDeptRelation();
 		condition.setDescendant(sysDept.getParentId());
-		List<SysDeptRelation> relationList = sysDeptRelationMapper
+		List<SysDeptRelation> relationList = this.baseMapper
 			.selectList(Wrappers.<SysDeptRelation>query().lambda()
 				.eq(SysDeptRelation::getDescendant, sysDept.getParentId()))
 			.stream().map(relation -> {
@@ -54,7 +52,7 @@ public class SysDeptRelationServiceImpl extends ServiceImpl<SysDeptRelationMappe
 		SysDeptRelation own = new SysDeptRelation();
 		own.setDescendant(sysDept.getDeptId());
 		own.setAncestor(sysDept.getDeptId());
-		sysDeptRelationMapper.insert(own);
+		this.baseMapper.insert(own);
 	}
 
 	/**
