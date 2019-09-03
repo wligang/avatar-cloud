@@ -1,7 +1,7 @@
 apply plugin: 'org.springframework.boot'
 description = ''
 dependencies {
-  compile(group: 'org.springframework.cloud', name: 'spring-cloud-starter-config',  version:"${springCloudStarterVersion}") {
+  compile(group: 'org.springframework.cloud', name: 'spring-cloud-starter-config',  version:"${cloudStarterConfigVersion}") {
     exclude(module: 'com.google.code.gson')
   }
   compile project(':avatar-common:avatar-common-core')
