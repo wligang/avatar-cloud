@@ -31,6 +31,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private ObjectMapper objectMapper;
+
 	@Autowired
 	private ClientDetailsService clientDetailsService;
 	@Lazy

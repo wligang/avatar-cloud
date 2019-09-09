@@ -14,7 +14,7 @@ import java.util.Collection;
  * @date 2019/2/1
  * 扩展用户信息
  */
-public class PigUser extends User {
+public class BaseUser extends User {
 	/**
 	 * 用户ID
 	 */
@@ -46,7 +46,7 @@ public class PigUser extends User {
 	 * @throws IllegalArgumentException if a <code>null</code> value was passed either as
 	 *                                  a parameter or as an element in the <code>GrantedAuthority</code> collection
 	 */
-	public PigUser(Integer id, Integer deptId, String username, String password, boolean enabled, boolean accountNonExpired, boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities) {
+	public BaseUser(Integer id, Integer deptId, String username, String password, boolean enabled, boolean accountNonExpired, boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities) {
 		super(username, password, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked, authorities);
 		this.id = id;
 		this.deptId = deptId;

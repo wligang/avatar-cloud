@@ -5,7 +5,7 @@ package com.wlgdo.avatar.common.security.util;
 
 import cn.hutool.core.util.StrUtil;
 import com.wlgdo.avatar.common.core.constant.SecurityConstants;
-import com.wlgdo.avatar.common.security.service.PigUser;
+import com.wlgdo.avatar.common.security.service.BaseUser;
 import lombok.experimental.UtilityClass;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -33,10 +33,10 @@ public class SecurityUtils {
 	/**
 	 * 获取用户
 	 */
-	public PigUser getUser(Authentication authentication) {
+	public BaseUser getUser(Authentication authentication) {
 		Object principal = authentication.getPrincipal();
-		if (principal instanceof PigUser) {
-			return (PigUser) principal;
+		if (principal instanceof BaseUser) {
+			return (BaseUser) principal;
 		}
 		return null;
 	}
@@ -44,7 +44,7 @@ public class SecurityUtils {
 	/**
 	 * 获取用户
 	 */
-	public PigUser getUser() {
+	public BaseUser getUser() {
 		Authentication authentication = getAuthentication();
 		if (authentication == null) {
 			return null;

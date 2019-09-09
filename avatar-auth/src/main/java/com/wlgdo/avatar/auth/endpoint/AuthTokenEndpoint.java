@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wlgdo.avatar.common.core.constant.CommonConstants;
 import com.wlgdo.avatar.common.core.constant.SecurityConstants;
 import com.wlgdo.avatar.common.core.util.R;
-import com.wlgdo.avatar.common.security.service.PigUser;
+import com.wlgdo.avatar.common.security.service.BaseUser;
 import lombok.AllArgsConstructor;
 import org.springframework.data.redis.core.ConvertingCursor;
 import org.springframework.data.redis.core.Cursor;
@@ -131,16 +131,16 @@ public class AuthTokenEndpoint {
 			if (authentication instanceof UsernamePasswordAuthenticationToken) {
 				UsernamePasswordAuthenticationToken authenticationToken = (UsernamePasswordAuthenticationToken) authentication;
 
-				if (authenticationToken.getPrincipal() instanceof PigUser) {
-					PigUser user = (PigUser) authenticationToken.getPrincipal();
+				if (authenticationToken.getPrincipal() instanceof BaseUser) {
+					BaseUser user = (BaseUser) authenticationToken.getPrincipal();
 					map.put("user_id", user.getId() + "");
 					map.put("username", user.getUsername() + "");
 				}
 			} else if (authentication instanceof PreAuthenticatedAuthenticationToken) {
 				//刷新token方式
 				PreAuthenticatedAuthenticationToken authenticationToken = (PreAuthenticatedAuthenticationToken) authentication;
-				if (authenticationToken.getPrincipal() instanceof PigUser) {
-					PigUser user = (PigUser) authenticationToken.getPrincipal();
+				if (authenticationToken.getPrincipal() instanceof BaseUser) {
+					BaseUser user = (BaseUser) authenticationToken.getPrincipal();
 					map.put("user_id", user.getId() + "");
 					map.put("username", user.getUsername() + "");
 				}

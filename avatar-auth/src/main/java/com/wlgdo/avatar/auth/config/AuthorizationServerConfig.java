@@ -4,7 +4,7 @@ package com.wlgdo.avatar.auth.config;
 
 import com.wlgdo.avatar.common.core.constant.SecurityConstants;
 import com.wlgdo.avatar.common.security.component.WebResponseExceptionTranslator;
-import com.wlgdo.avatar.common.security.service.PigClientDetailsService;
+import com.wlgdo.avatar.common.security.service.ClientDetailsService;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.context.annotation.Bean;
@@ -44,7 +44,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	@Override
 	@SneakyThrows
 	public void configure(ClientDetailsServiceConfigurer clients) {
-		PigClientDetailsService clientDetailsService = new PigClientDetailsService(dataSource);
+		ClientDetailsService clientDetailsService = new ClientDetailsService(dataSource);
 		clientDetailsService.setSelectClientDetailsSql(SecurityConstants.DEFAULT_SELECT_STATEMENT);
 		clientDetailsService.setFindClientDetailsSql(SecurityConstants.DEFAULT_FIND_STATEMENT);
 		clients.withClientDetails(clientDetailsService);

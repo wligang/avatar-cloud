@@ -30,7 +30,7 @@ public class ResourceServerConfigurerAdapter extends org.springframework.securit
 	@Autowired
 	private FilterIgnorePropertiesConfig ignorePropertiesConfig;
 	@Autowired
-	private AccessDeniedHandler pigAccessDeniedHandler;
+	private AccessDeniedHandler wlgdoAccessDeniedHandler;
 	@Autowired
 	private RestTemplate lbRestTemplate;
 
@@ -62,7 +62,7 @@ public class ResourceServerConfigurerAdapter extends org.springframework.securit
 		remoteTokenServices.setRestTemplate(lbRestTemplate);
 		remoteTokenServices.setAccessTokenConverter(accessTokenConverter);
 		resources.authenticationEntryPoint(resourceAuthExceptionEntryPoint)
-			.accessDeniedHandler(pigAccessDeniedHandler)
+			.accessDeniedHandler(wlgdoAccessDeniedHandler)
 			.tokenServices(remoteTokenServices);
 	}
 }

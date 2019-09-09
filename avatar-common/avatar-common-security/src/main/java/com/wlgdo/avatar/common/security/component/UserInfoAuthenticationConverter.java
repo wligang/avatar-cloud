@@ -1,6 +1,6 @@
 package com.wlgdo.avatar.common.security.component;
 
-import com.wlgdo.avatar.common.security.service.PigUser;
+import com.wlgdo.avatar.common.security.service.BaseUser;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -54,7 +54,7 @@ public class UserInfoAuthenticationConverter implements UserAuthenticationConver
 			String username = (String) map.get(USERNAME);
 			Integer id = (Integer) map.get(USER_ID);
 			Integer deptId = (Integer) map.get(DEPT_ID);
-			PigUser user = new PigUser(id, deptId, username, N_A, true
+			BaseUser user = new BaseUser(id, deptId, username, N_A, true
 				, true, true, true, authorities);
 			return new UsernamePasswordAuthenticationToken(user, N_A, authorities);
 		}
