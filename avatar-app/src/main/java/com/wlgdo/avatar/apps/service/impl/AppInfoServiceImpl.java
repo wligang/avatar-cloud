@@ -46,6 +46,13 @@ public class AppInfoServiceImpl extends ServiceImpl<AppInfoMapper, AppInfo> impl
 		return baseMapper.getAppInfoPage(page, appInfo);
 	}
 
+	/**
+	 * 根据某个字段将该对象妆化成Map
+	 * @param field
+	 * @param quaryWrapper
+	 * @return
+	 * @throws IntrospectionException
+	 */
 	@Override
 	public Map<Object,AppInfo> getMap(String field, QueryWrapper quaryWrapper) throws IntrospectionException {
 		List<AppInfo> list = appInfoMapper.selectList(quaryWrapper);
