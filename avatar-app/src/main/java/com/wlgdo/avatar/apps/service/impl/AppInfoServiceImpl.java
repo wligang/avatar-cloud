@@ -48,13 +48,14 @@ public class AppInfoServiceImpl extends ServiceImpl<AppInfoMapper, AppInfo> impl
 
 	/**
 	 * 根据某个字段将该对象妆化成Map
+	 *
 	 * @param field
 	 * @param quaryWrapper
 	 * @return
 	 * @throws IntrospectionException
 	 */
 	@Override
-	public Map<Object,AppInfo> getMap(String field, QueryWrapper quaryWrapper) throws IntrospectionException {
+	public Map<Object, AppInfo> getMap(String field, QueryWrapper quaryWrapper) throws IntrospectionException {
 		List<AppInfo> list = appInfoMapper.selectList(quaryWrapper);
 		PropertyDescriptor propertyDescriptor = new PropertyDescriptor(field, AppInfo.class);
 
@@ -72,6 +73,11 @@ public class AppInfoServiceImpl extends ServiceImpl<AppInfoMapper, AppInfo> impl
 		return collect;
 	}
 
+	/**
+	 * 下面的方法已经在Java8里面实现了，不需要这样了
+	 *
+	 * @throws IntrospectionException
+	 */
 	public List<AppInfo> filter(String field, Object target, QueryWrapper quaryWrapper) throws IntrospectionException {
 		List<AppInfo> list = appInfoMapper.selectList(quaryWrapper);
 		PropertyDescriptor propertyDescriptor = new PropertyDescriptor(field, AppInfo.class);
