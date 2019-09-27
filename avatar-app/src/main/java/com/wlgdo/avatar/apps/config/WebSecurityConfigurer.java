@@ -38,6 +38,10 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private AuthorizationServerTokenServices defaultAuthorizationServerTokenServices;
 
+	/**
+	 * 权限配置
+	 * @param http
+	 */
 	@Override
 	@SneakyThrows
 	protected void configure(HttpSecurity http) {
